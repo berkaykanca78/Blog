@@ -1,0 +1,18 @@
+﻿@using (Html.BeginForm("List", "Blog", FormMethod.Get))
+{
+    <div class="card border-dark mb-3" style="margin-top:15px;">
+        <div class="card-header"><h4>Blog Arama</h4></div>
+        <div class="card-body text-dark">
+            <div class="input-group">
+                @Html.TextBox("q", null, new { placeholder = "Blog Ara",@class = "form-control" })
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">
+                        <span><i class="fa fa-search" aria-hidden="true"></i></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+}
+
+

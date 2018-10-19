@@ -1,0 +1,24 @@
+﻿@model PagedList.IPagedList<BKBlogMVCApp.Models.BlogModel>
+@using PagedList.Mvc;
+@using PagedList;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tüm Bloglar</h2>
+<hr />
+@Html.Partial("BlogListesi", Model)
+<div class="row" style="margin-top:5px;">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-center align-items-center" style="height:100px;">
+            @Html.PagedListPager(Model, _PagedNo => Url.Action("List", "Blog", new { PagedNo = _PagedNo }), new PagedListRenderOptions { LinkToFirstPageFormat = "<< İlk", LinkToPreviousPageFormat = "< Önceki", LinkToNextPageFormat = "Sonraki >", LinkToLastPageFormat = "Son >>" })
+        </div>
+    </div>
+</div>
+
+@section SagKolon
+{
+    @Html.Partial("Arama")
+    @{Html.RenderAction("KategoriListesi", "Category");}
+}

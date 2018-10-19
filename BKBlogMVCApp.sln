@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BKBlogMVCApp", "BKBlogMVCApp\BKBlogMVCApp.csproj", "{FE2F790A-FF2E-421B-A9AE-5F10E20B7F8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE2F790A-FF2E-421B-A9AE-5F10E20B7F8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2F790A-FF2E-421B-A9AE-5F10E20B7F8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2F790A-FF2E-421B-A9AE-5F10E20B7F8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2F790A-FF2E-421B-A9AE-5F10E20B7F8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {332FCD1C-3A69-4395-917A-62358890E6F4}
+	EndGlobalSection
+EndGlobal

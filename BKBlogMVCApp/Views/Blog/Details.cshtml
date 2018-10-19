@@ -1,0 +1,41 @@
+﻿@model BKBlogMVCApp.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>@Model.Baslik</h1>
+<hr />
+
+<div class="blog" style="margin-top:5px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card border-dark mb-4">
+                    <img class="card-img-top img-responsive" src="@Url.Content("~/img/"+@Model.Resim)" alt="" style="width:100%;height:100%;">
+                    <div class="card-body text-dark">
+                        <div class="card-text">
+                            <h3>@Model.Aciklama</h3>
+                            <p>@Model.Icerik</p>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <i class="fa fa-calendar"></i>
+                        <span>&nbsp;@Model.EklenmeTarihi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section SagKolon
+{
+    @Html.Partial("Search")
+    @{Html.RenderAction("KategoriListesi", "Category");}
+}
+
+
+
+

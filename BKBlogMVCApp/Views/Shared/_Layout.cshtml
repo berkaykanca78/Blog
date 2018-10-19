@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Google Searching -->
+    <title>Berkay Kanca Resmi Blog Sayfası</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Berkay Kanca Resmi Blog Sayfası">
+    <meta name="keywords" content="Berkay Kanca,Berkay,Kanca">
+    <meta name="author" content="Berkay Kanca">
+    <meta name="google-site-verification" content="m2mhCpcU0exl8iHBtQmOUK6eXN4R9f1sW15xXgtFYpg" />
+    <!--External Files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="shortcut icon" type="image/png" href="~/img/favicon.png" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#373a48">
+        <div class="container">
+            <a id="header" class="navbar-brand" href="#" style="color:white">Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuac">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuac" style="color:white">
+                @Html.Partial("Basliklar")
+                @Html.Partial("Giris")
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content" style="margin-top:20px">
+        <div class="row">
+            @if (IsSectionDefined("SagKolon"))
+            {
+                <div class="col-md-8">
+                    @RenderBody()
+                </div>
+                <div class="col-md-4">
+                    @RenderSection("SagKolon")
+                </div>
+            }
+            else
+            {
+                <div class="col-md-12">
+                    @RenderBody()
+                </div>
+            }
+        </div>
+    </div>
+
+    <footer style="margin-top:30px;">
+        <div id="social-networks" class="py-4">
+            <a href="https://www.facebook.com/berkaykanca78" class="facebook"><i class="fa fa-facebook-official"></i></a>
+            <a href="https://www.instagram.com/berkaykanca/" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://tr.linkedin.com/in/berkay-kanca-33659693" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
+        <div id="footer-copyright" class="py-1">
+            <p>&copy; @DateTime.Now.Year - Berkay Kanca Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
